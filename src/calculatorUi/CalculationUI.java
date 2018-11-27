@@ -216,6 +216,14 @@ public class CalculationUI extends JPanel
 
                 BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
+                bufferedWriter.write("Earned");
+                bufferedWriter.write(',');
+                if (pointBased == true)
+                    bufferedWriter.write("Possible");
+                else
+                    bufferedWriter.write("Percentage Worth");
+                bufferedWriter.newLine();
+
                 for (int i = 0; i<len; i++) {
                     if (earnedFields.get(i).getText() == "" || possibleFields.get(i).getText() == "")
                         continue;
