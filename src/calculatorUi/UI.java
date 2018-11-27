@@ -16,14 +16,14 @@ import javax.swing.*;
  */
 
 public class UI {
-    JFrame frame;
-    JMenuBar bar;
-    JMenu prefs;
-    JMenuItem about;
-    JMenuItem exit;
-    JTabbedPane panelHolder;
-    JPanel percentPanel;
-    JPanel pointPanel;
+    private JFrame frame;
+    private JMenuBar bar;
+    private JMenu prefs;
+    private JMenuItem about;
+    private JMenuItem exit;
+    private JTabbedPane panelHolder;
+    private JPanel percentPanel;
+    private JPanel pointPanel;
 
     public UI () {
 
@@ -62,9 +62,8 @@ public class UI {
         panelHolder.add("% Calculator", percentPanel);
         panelHolder.add("Pt Calculator", pointPanel);
 
-
-        pointPanel.setVisible(false);
-        percentPanel.setVisible(true);
+        //centering JFrame on screen and setting the frame to visible.
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
